@@ -1,0 +1,398 @@
+#!/bin/bash
+
+# Global variable for output.
+OUTPUT=""
+
+usage()
+{
+  cat <<- EOF
+  NAME
+    portdetails
+
+  SYNOPSIS
+    portdetails [options]
+
+  DESCRIPTION
+    portdetails provides descriptions on the typical usage of TCP and UDP ports
+    and makes them available in a terminal-compatible output, with a bunch of
+    helpful search options. Data is retrieved from the List of TCP and
+    UDP port numbers Wikipedia entry
+    (https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers). There is
+    a local copy of this db in the tool's repository. If you want to update it
+    you need to run the tool with -u flag on macOS (requires brew) or on a
+    Debian / Ubuntu based GNU/Linux distribution.
+
+  OPTIONS
+    -h | --help            Print this help.
+    -p <port>              Search for a specific comma separated list of ports.
+    -a <number>            Search for a comma separated list of numbers inside
+                           ports (approximate, e.g. 80 matches 8008, 8080, etc)
+    -d <search string>     Search for a comma separated list of strings
+                           (case insensitive).
+    -n                     Only print description(s).
+    -u                     Update DB from Wikipedia.
+    -l                     Create tool's symlink.
+
+  EXAMPLES
+    - Get a full list of ports and the description of their typical usage.
+      portdetails
+
+    - Search for specific port 80.
+      portdetails -p 80
+
+    - Search for specific ports 139,445,3389.
+      portdetails -p 139,445,3389
+
+    - Search for specific port 80 but only print description.
+      portdetails -p 80 -n
+
+    - Search for ports that include 80 inside them (e.g. 80, 8080, 8008).
+      portdetails -a 80
+
+    - Search for ports where their description has MySQL or Postgre on them.
+      portdetails -d "MySQL,Postgre"
+
+    - Search from stdin for exact port numbers or strings separated by newlines.
+      cat tests/ports.txt | portdetails
+EOF
+}
+
+cmdline()
+{
+  local arg=
+
+  for arg; do
+
+    local delim=""
+
+    # Translate --gnu-long-options to -g (short options).
+    case "$arg" in
+      --help)           args="${args}-h ";;
+
+      # Pass through anything else.
+      *) [[ "${arg:0:1}" == "-" ]] || delim="\""
+        args="${args}${delim}${arg}${delim} ";;
+    esac
+
+  done
+
+  # Reset the positional parameters to the short options.
+  eval set -- $args
+
+	while getopts "hp:a:d:nul" OPTION
+	do
+		case $OPTION in
+			h)	usage ; exit 0 ;;
+			p)	PORTS="$OPTARG" ;;
+      a)	APPROXIMATE_PORTS="$OPTARG" ;;
+      d)	DESCRIPTIONS="$OPTARG" ;;
+      n)	readonly ONLY_DESC="true" ;;
+      u)	readonly UPDATE="true" ;;
+      l)	readonly SYMLINK="true" ;;
+			\?)  echo -e "\n  Option does not exist.\n" >&2 ; exit 1 ;;
+		esac
+	done
+}
+
+get_path()
+{
+  # Save working directory.
+  WORKDIR="$(pwd)"
+
+  # The target file is the first argument of this function.
+  TARGET_FILE=$1
+
+  # Change to the target file directory.
+  cd "$(dirname $TARGET_FILE)"
+
+  # Get target file basename.
+  TARGET_FILE="$(basename $TARGET_FILE)"
+
+  # Iterate down a (possible) chain of symlinks.
+  while [ -L "$TARGET_FILE" ]; do
+
+    # Repeat previous process until the file is not a symlink anymore.
+    TARGET_FILE="$(readlink $TARGET_FILE)"
+    cd "$(dirname $TARGET_FILE)"
+    TARGET_FILE="$(basename $TARGET_FILE)"
+
+  done
+
+  # Compute the canonicalized name by finding the physical path
+  # for the directory we're in and appending the target file.
+  PHYS_DIR="$(pwd -P)"
+
+  # Print the physical directory as output.
+  echo $PHYS_DIR
+
+  # Go back to working directory.
+  cd "$WORKDIR"
+}
+
+set_path()
+{
+  PROJECT_PATH="$(get_path "$1")"
+}
+
+os_config()
+{
+  # OS Defined Variables.
+  if [[ "$OSTYPE" == "linux-gnu" ]]; then
+
+    # GNU/Linux.
+    BIN_FOLDER="/usr/bin"
+    PACKAGE_INSTALL="sudo apt-get -y install"
+
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+
+    # macOS.
+    BIN_FOLDER="/usr/local/bin"
+    PACKAGE_INSTALL="brew install"
+
+  fi
+}
+
+check_dependency()
+{
+  local DEPENDENCY="$1"
+
+  if ! hash "$DEPENDENCY" >/dev/null 2>&1; then
+
+    echo "[*] Dependency not found. Installing $DEPENDENCY"
+    $PACKAGE_INSTALL "$DEPENDENCY"
+
+  fi
+}
+
+check_dependencies()
+{
+  local DEPENDENCIES="xmlstarlet"
+
+  os_config
+
+  for DEPENDENCY in $DEPENDENCIES; do
+
+    check_dependency "$DEPENDENCY"
+
+  done
+}
+
+download_dataset_from_wikipedia()
+{
+  # Download HTML page from Wikipedia with the information.
+  curl -s "https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" \
+       -o "$PROJECT_PATH/resources/dataset.tmp"
+
+  # Remove newlines from HTML file.
+  tr -d '\n' < "$PROJECT_PATH/resources/dataset.tmp" > \
+    "$PROJECT_PATH/resources/dataset.html"
+
+  # Delete temp file.
+  rm "$PROJECT_PATH/resources/dataset.tmp"
+}
+
+parse_html_port_tables()
+{
+  # Print Header.
+  echo "PORT|TCP|UDP|DESCRIPTION" > "$PROJECT_PATH/resources/dataset.psv"
+
+  # The page has 3 different HTML tables with the data.
+
+  # Using xmlstarlet to parse the first table.
+  xmlstarlet sel -T -t -m \
+    "/html/body/div[@id='content']/div[@id='bodyContent']/div[@id='mw-content-text']/div[@class='mw-parser-output']/table[3]/tbody/tr" \
+    -v "concat(td[1],'|',td[2],'|',td[3],'|',td[5])"   \
+    -n "$PROJECT_PATH/resources/dataset.html"        | \
+    sed 's/\[.*\]//g' | \
+    grep '^[0-9]' >> "$PROJECT_PATH/resources/dataset.psv"
+
+  # Using xmlstarlet to parse the second table.
+  xmlstarlet sel -T -t -m \
+    "/html/body/div[@id='content']/div[@id='bodyContent']/div[@id='mw-content-text']/div[@class='mw-parser-output']/table[4]/tbody/tr" \
+     -v "concat(td[1],'|',td[2],'|',td[3],'|',td[4])"   \
+     -n "$PROJECT_PATH/resources/dataset.html"        | \
+    sed 's/\[.*\]//g' | \
+    grep '^[0-9]' >> "$PROJECT_PATH/resources/dataset.psv"
+
+  # Using xmlstarlet to parse the third table.
+  xmlstarlet sel -T -t -m \
+    "/html/body/div[@id='content']/div[@id='bodyContent']/div[@id='mw-content-text']/div[@class='mw-parser-output']/table[5]/tbody/tr" \
+    -v "concat(td[1],'|',td[2],'|',td[3],'|',td[4])"   \
+    -n "$PROJECT_PATH/resources/dataset.html"        | \
+    sed 's/\[.*\]//g' | \
+    grep '^[0-9]' >> "$PROJECT_PATH/resources/dataset.psv"
+}
+
+create_db()
+{
+  # If DB is already present, or update was not requested, return.
+  if [[ -f "$PROJECT_PATH/resources/dataset.html" && \
+        -f "$PROJECT_PATH/resources/dataset.psv" && \
+        "$UPDATE" != "true" ]]; then
+
+    return
+
+  fi
+
+  check_dependencies
+
+  download_dataset_from_wikipedia
+
+  parse_html_port_tables
+}
+
+link_tool()
+{
+  # If symlink was not requested, return.
+  if [[ "$SYMLINK" != "true" ]]; then
+
+    return
+
+  fi
+
+  os_config
+
+  # Check if link exist and link or update.
+  if [ -L "$BIN_FOLDER/portdetails" ]; then
+
+     # Delete old symlink.
+     rm -f "$BIN_FOLDER/portdetails"
+
+  fi
+
+  # Create symlink.
+  ln -s "$PROJECT_PATH/portdetails" "$BIN_FOLDER/portdetails"
+
+  # Just do the symlink and exit.
+  exit
+}
+
+get_output()
+{
+  OUTPUT="$(cat "$PROJECT_PATH/resources/dataset.psv")"
+}
+
+check_stdin()
+{
+  if [ -t 0 ]; then
+
+    return
+
+  else
+
+    while read -r LINE ; do
+
+      if [[ "$(grep '^[0-9]*$' <<< "$LINE")" != "" ]]; then
+
+        PORTS+=",$LINE"
+
+      else
+
+        DESCRIPTIONS+=",$LINE"
+
+      fi
+
+    done
+
+  fi
+}
+
+filter_port()
+{
+  if [ -z $PORTS ] && [ -z $APPROXIMATE_PORTS ]; then
+
+    return
+
+  fi
+
+  if [ ! -z $PORTS ]; then
+
+    for PORT in $(sed 's/,/ /g' <<< "$PORTS"); do
+
+      TEMP_OUTPUT+="$(grep "^$PORT|" <<< "$OUTPUT")"$'\n'
+
+    done
+
+  fi
+
+  if [ ! -z $APPROXIMATE_PORTS ]; then
+
+    for APPROXIMATE_PORT in $(sed 's/,/ /g' <<< "$APPROXIMATE_PORTS"); do
+
+      TEMP_OUTPUT+="$(grep "^[0-9]*$APPROXIMATE_PORT[0-9]*|" <<< "$OUTPUT")"$'\n'
+
+    done
+
+  fi
+}
+
+filter_description()
+{
+  if [ ! -z $DESCRIPTIONS ]; then
+
+    for DESCRIPTION in $(sed 's/,/ /g' <<< "$DESCRIPTIONS"); do
+
+      TEMP_OUTPUT+="$(grep -i "|[^|]*$DESCRIPTION[^|]*\$" <<< "$OUTPUT")"$'\n'
+
+    done
+
+  fi
+}
+
+update_output()
+{
+  if [ ! -z "$TEMP_OUTPUT" ]; then
+
+    OUTPUT="$(sort -u -n <<< "$TEMP_OUTPUT" | sed '/^$/d')"
+
+  fi
+}
+
+filter_print_description()
+{
+  if [ ! -z $ONLY_DESC ]; then
+
+    OUTPUT="$(cut -d "|" -f 4 <<< "$OUTPUT")"
+
+  else
+
+    OUTPUT="$(sed 's/\([^|]*\)|[^|]*|[^|]*|\([^|]*\)/\1|\2/g' <<< "$OUTPUT")"
+
+  fi
+}
+
+print_output()
+{
+  if [[ "$OUTPUT" != "" ]]; then
+
+    echo "$OUTPUT";
+
+  fi
+}
+
+main()
+{
+  cmdline $@
+
+  set_path "$0"
+
+  link_tool
+
+  create_db
+
+  get_output
+
+  check_stdin $@
+
+  filter_port
+
+  filter_description
+
+  update_output
+
+  filter_print_description
+
+  print_output
+}
+
+main $@

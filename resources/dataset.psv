@@ -1,0 +1,1085 @@
+PORT|TCP|UDP|DESCRIPTION
+0|Reserved|Reserved|
+1|Yes|Assigned|TCP Port Service Multiplexer (TCPMUX). Historic. Both TCP and UDP have been assigned to TCPMUX by IANA,
+5|Assigned|Assigned|Remote Job Entry and IANA has assigned both TCP and UDP 5 to it.
+7|Yes|Yes|Echo Protocol
+9|Yes|Yes|Discard Protocol
+11|Yes|Yes|Active Users (systat service)
+13|Yes|Yes|Daytime Protocol
+15|Yes|No|Previously netstat service
+17|Yes|Yes|Quote of the Day (QOTD)
+18|Yes|Yes|Message Send Protocol
+19|Yes|Yes|Character Generator Protocol (CHARGEN)
+20|Yes|Assigned|File Transfer Protocol (FTP) data transfer
+21|Yes|Assigned|File Transfer Protocol (FTP) control (command)
+22|Yes|Assigned|Secure Shell (SSH), secure logins, file transfers (scp, sftp) and port forwarding
+23|Yes|Assigned|Telnet protocol—unencrypted text communications
+25|Yes|Assigned|Simple Mail Transfer Protocol (SMTP), used for email routing between mail servers
+37|Yes|Yes|Time Protocol
+42|Assigned|Yes|Host Name Server Protocol
+43|Yes|Assigned|WHOIS protocol
+47|Reserved|Reserved|
+49|Yes|Yes|TACACS Login Host protocol.
+51|Reserved|Reserved|Historically used for Interface Message Processor logical address management, entry has been removed by IANA on 2013-05-25
+52|Assigned|Assigned|Xerox Network Systems (XNS) Time Protocol. Despite this port being assigned by IANA, the service is meant to work on SPP (ancestor of IPX/SPX), instead of TCP/IP.
+53|Yes|Yes|Domain Name System (DNS)
+54|Assigned|Assigned|Xerox Network Systems (XNS) Clearinghouse (Name Server). Despite this port being assigned by IANA, the service is meant to work on SPP (ancestor of IPX/SPX), instead of TCP/IP.
+56|Assigned|Assigned|Xerox Network Systems (XNS) Authentication Protocol. Despite this port being assigned by IANA, the service is meant to work on SPP (ancestor of IPX/SPX), instead of TCP/IP.
+58|Assigned|Assigned|Xerox Network Systems (XNS) Mail. Despite this port being assigned by IANA, the service is meant to work on SPP (ancestor of IPX/SPX), instead of TCP/IP.
+61|Reserved|Reserved|Historically assigned to the NIFTP-Based Mail protocol,
+67|Assigned|Yes|Bootstrap Protocol (BOOTP) server; also used by Dynamic Host Configuration Protocol (DHCP)
+68|Assigned|Yes|Bootstrap Protocol (BOOTP) client; also used by Dynamic Host Configuration Protocol (DHCP)
+69|Assigned|Yes|Trivial File Transfer Protocol (TFTP)
+70|Yes|Assigned|Gopher protocol
+71–74|Yes|Yes|NETRJS protocol
+79|Yes|Assigned|Finger protocol
+80|Yes|Assigned|Hypertext Transfer Protocol (HTTP)
+81|Yes||TorPark onion routing
+82||Yes|TorPark control
+83|Yes|Assigned|MIT ML Device, networking file system 
+88|Yes|Assigned|Kerberos authentication system
+90|Yes|Yes|PointCast (dotcom)
+95|Yes|Assigned|SUPDUP, terminal-independent remote login 
+101|Yes|Assigned|NIC host name
+102|Yes|Assigned|ISO Transport Service Access Point (TSAP) Class 0 protocol;
+104|Yes|Yes|Digital Imaging and Communications in Medicine (DICOM; also port 11112)
+105|Yes|Yes|CCSO Nameserver
+107|Yes|Yes|Remote User Telnet Service (RTelnet)
+108|Yes|Yes|IBM Systems Network Architecture (SNA) gateway access server
+109|Yes|Assigned|Post Office Protocol, version 2 (POP2)
+110|Yes|Assigned|Post Office Protocol, version 3 (POP3)
+111|Yes|Yes|Open Network Computing Remote Procedure Call (ONC RPC, sometimes referred to as Sun RPC)
+113|Yes|No|Ident, authentication service/identification protocol, used by IRC servers to identify users
+115|Yes|Assigned|Simple File Transfer Protocol
+117|Yes|Yes|UUCP Mapping Project (path service)
+118|Yes|Yes|Structured Query Language (SQL) Services
+119|Yes|Assigned|Network News Transfer Protocol (NNTP),
+123|Assigned|Yes|Network Time Protocol (NTP), used for time synchronization
+126|Yes|Yes|Formerly Unisys Unitary Login, renamed by Unisys to NXEdit. Used by Unisys Programmer's Workbench for Clearpath MCP, an IDE for Unisys MCP software development
+135|Yes|Yes|DCE endpoint resolution
+137|Yes|Yes|NetBIOS Name Service, used for name registration and resolution
+138|Assigned|Yes|NetBIOS Datagram Service
+139|Yes|Assigned|NetBIOS Session Service
+143|Yes|Assigned|Internet Message Access Protocol (IMAP),
+152|Yes|Yes|Background File Transfer Program (BFTP)
+153|Yes|Yes|Simple Gateway Monitoring Protocol (SGMP), a protocol for remote inspection and alteration of gateway management information
+156|Yes|Yes|Structured Query Language (SQL) Service
+158|Yes|Yes|Distributed Mail System Protocol (DMSP, sometimes referred to as Pcmail)
+161|Assigned|Yes|Simple Network Management Protocol (SNMP)
+162|Yes|Yes|Simple Network Management Protocol Trap (SNMPTRAP)
+170|Yes|Yes|Network PostScript print server
+177|Yes|Yes|X Display Manager Control Protocol (XDMCP), used for remote logins to an X Display Manager server
+179|Yes|Assigned|Border Gateway Protocol (BGP), used to exchange routing and reachability information among autonomous systems (AS) on the Internet
+194|Yes|Yes|Internet Relay Chat (IRC)
+199|Yes|Yes|SNMP Unix Multiplexer (SMUX)
+201|Yes|Yes|AppleTalk Routing Maintenance
+209|Yes|Assigned|Quick Mail Transfer Protocol
+210|Yes|Yes|ANSI Z39.50
+213|Yes|Yes|Internetwork Packet Exchange (IPX)
+218|Yes|Yes|Message posting protocol (MPP)
+220|Yes|Yes|Internet Message Access Protocol (IMAP), version 3
+225–241|Reserved|Reserved|
+249–255|Reserved|Reserved|
+259|Yes|Yes|Efficient Short Remote Operations (ESRO)
+262|Yes|Yes|Arcisdms
+264|Yes|Yes|Border Gateway Multicast Protocol (BGMP)
+280|Yes|Yes|http-mgmt
+300|Yes||ThinLinc Web Access
+308|Yes||Novastor Online Backup
+311|Yes|Assigned|Mac OS X Server Admin)
+318|Yes|Yes|PKIX Time Stamp Protocol (TSP)
+319||Yes|Precision Time Protocol (PTP) event messages
+320||Yes|Precision Time Protocol (PTP) general messages
+350|Yes|Yes|Mapping of Airline Traffic over Internet Protocol (MATIP) type A
+351|Yes|Yes|MATIP type B
+356|Yes|Yes|cloanto-net-1 (used by Cloanto Amiga Explorer and VMs)
+366|Yes|Yes|On-Demand Mail Relay (ODMR)
+369|Yes|Yes|Rpc2portmap
+370|Yes|Yes|codaauth2, Coda authentication server
+371|Yes|Yes|ClearCase albd
+383|Yes|Yes|HP data alarm manager
+384|Yes|Yes|A Remote Network Server System
+387|Yes|Yes|AURP (AppleTalk Update-based Routing Protocol)
+388|Yes|Assigned|Unidata LDM near real-time data distribution protocol
+389|Yes|Assigned|Lightweight Directory Access Protocol (LDAP)
+399|Yes|Yes|Digital Equipment Corporation DECnet+ (Phase V) over TCP/IP (RFC1859)
+401|Yes|Yes|Uninterruptible power supply (UPS)
+427|Yes|Yes|Service Location Protocol (SLP)
+433|Yes|Yes|NNSP, part of Network News Transfer Protocol
+434|Yes|Yes|Mobile IP Agent (RFC 5944)
+443|Yes|Assigned|Hypertext Transfer Protocol over TLS/SSL (HTTPS)
+444|Yes|Yes|Simple Network Paging Protocol (SNPP), RFC 1568
+445|Yes|Yes|Microsoft-DS (Directory Services) Active Directory, Windows shares
+464|Yes|Yes|Kerberos Change/Set password
+465|Yes|No|URL Rendezvous Directory for SSM (Cisco protocol)
+475|Yes|Yes|tcpnethaspsrv, Aladdin Knowledge Systems Hasp services
+491|Yes||GO-Global remote access and application publishing software
+497|Yes|Yes|Retrospect
+500|Assigned|Yes|Internet Security Association and Key Management Protocol (ISAKMP) / Internet Key Exchange (IKE)
+502|Yes|Yes|Modbus Protocol
+504|Yes|Yes|Citadel, multiservice protocol for dedicated clients for the Citadel groupware system
+510|Yes|Yes|FirstClass Protocol (FCP), used by FirstClass client/server groupware system
+512|Yes||Rexec, Remote Process Execution
+513|Yes||rlogin
+514|Yes||Remote Shell, used to execute non-interactive commands on a remote system (Remote Shell, rsh, remsh)
+515|Yes|Assigned|Line Printer Daemon (LPD), print service
+517||Yes|Talk
+518||Yes|NTalk
+520|Yes||efs, extended file name server
+521||Yes|Routing Information Protocol Next Generation (RIPng)
+524|Yes|Yes|NetWare Core Protocol (NCP) is used for a variety things such as access to primary NetWare server resources, Time Synchronization, etc.
+525||Yes|Timed, Timeserver
+530|Yes|Yes|Remote procedure call (RPC)
+532|Yes|Assigned|netnews
+533||Yes|netwall, For Emergency Broadcasts
+540|Yes||Unix-to-Unix Copy Protocol (UUCP)
+542|Yes|Yes|commerce (Commerce Applications)
+543|Yes||klogin, Kerberos login
+544|Yes||kshell, Kerberos Remote shell
+546|Yes|Yes|DHCPv6 client
+547|Yes|Yes|DHCPv6 server
+548|Yes|Assigned|Apple Filing Protocol (AFP) over TCP
+550|Yes|Yes|new-rwho, new-who
+554|Yes|Yes|Real Time Streaming Protocol (RTSP)
+556|Yes||Remotefs, RFS, rfs_server
+560||Yes|rmonitor, Remote Monitor
+561||Yes|monitor
+563|Yes|Yes|NNTP over TLS/SSL (NNTPS)
+564|Yes||9P (Plan 9)
+585|Port 993|?|Legacy use of Internet Message Access Protocol over TLS/SSL (IMAPS), now in use at port 993.
+587|Yes|Assigned|email message submission (SMTP)
+591|Yes||FileMaker 6.0 (and later) Web Sharing (HTTP Alternate, also see port 80)
+593|Yes|Yes|HTTP RPC Ep Map, Remote procedure call over Hypertext Transfer Protocol, often used by Distributed Component Object Model services and Microsoft Exchange Server
+601|Yes||Reliable Syslog Service — used for system logging
+604|Yes||TUNNEL profile, a protocol for BEEP peers to form an application layer tunnel
+623||Yes|ASF Remote Management and Control Protocol (ASF-RMCP) & IPMI Remote Management Protocol
+625|Yes|No|Open Directory Proxy (ODProxy)
+631|Yes|Yes|Internet Printing Protocol (IPP)
+635|Yes|Yes|RLZ DBase
+636|Yes|Assigned|Lightweight Directory Access Protocol over TLS/SSL (LDAPS)
+639|Yes|Yes|MSDP, Multicast Source Discovery Protocol
+641|Yes|Yes|SupportSoft Nexus Remote Command (control/listening), a proxy gateway connecting remote control traffic
+643|Yes|Yes|SANity
+646|Yes|Yes|Label Distribution Protocol (LDP), a routing protocol used in MPLS networks
+647|Yes||DHCP Failover protocol
+648|Yes||Registry Registrar Protocol (RRP)
+651|Yes|Yes|IEEE-MMS
+653|Yes|Yes|SupportSoft Nexus Remote Command (data), a proxy gateway connecting remote control traffic
+654|Yes||Media Management System (MMS) Media Management Protocol (MMP)
+655|Yes|Yes|Tinc VPN daemon
+657|Yes|Yes|IBM RMC (Remote monitoring and Control) protocol, used by System p5 AIX Integrated Virtualization Manager (IVM) and Hardware Management Console to connect managed logical partitions (LPAR) to enable dynamic partition reconfiguration
+660|Yes|Assigned|Mac OS X Server administration,
+666|Yes|Yes|Doom, first online first-person shooter
+674|Yes||Application Configuration Access Protocol (ACAP)
+688|Yes|Yes|REALM-RUSD (ApplianceWare Server Appliance Management Protocol)
+690|Yes|Yes|Velneo Application Transfer Protocol (VATP)
+691|Yes||MS Exchange Routing
+694|Yes|Yes|Linux-HA high-availability heartbeat
+695|Yes||IEEE Media Management System over SSL (IEEE-MMS-SSL)
+698||Yes|Optimized Link State Routing (OLSR)
+700|Yes||Extensible Provisioning Protocol (EPP), a protocol for communication between domain name registries and registrars (RFC 5734)
+701|Yes||Link Management Protocol (LMP), a protocol that runs between a pair of nodes and is used to manage traffic engineering (TE) links
+702|Yes||IRIS (RFC 3983)
+706|Yes||Secure Internet Live Conferencing (SILC)
+711|Yes||Cisco Tag Distribution Protocol
+712|Yes||Topology Broadcast based on Reverse-Path Forwarding routing protocol (TBRPF; RFC 3684)
+749|Yes|Yes|Kerberos (protocol) administration
+750||Yes|kerberos-iv, Kerberos version IV
+751|Yes|Yes|kerberos_master, Kerberos authentication
+752||Yes|passwd_server, Kerberos password (kpasswd) server
+753|Yes|Yes|Reverse Routing Header (RRH)
+754|Yes|Yes|tell send
+760|Yes|Yes|krbupdate , Kerberos registration
+782|Yes||Conserver serial-console management server
+783|Yes||SpamAssassin spamd daemon
+800|Yes|Yes|mdbs-daemon
+802|Yes|Yes|MODBUS/TCP Security
+808|Yes||Microsoft Net.TCP Port Sharing Service
+829|Yes|Assigned|Certificate Management Protocol
+830|Yes|Yes|NETCONF over SSH
+831|Yes|Yes|NETCONF over BEEP
+832|Yes|Yes|NETCONF for SOAP over HTTPS
+833|Yes|Yes|NETCONF for SOAP over BEEP
+843|Yes||Adobe Flash
+847|Yes||DHCP Failover protocol
+848|Yes|Yes|Group Domain Of Interpretation (GDOI) protocol
+853|Yes|Yes|DNS over TLS (RFC 7858)
+860|Yes||iSCSI (RFC 3720)
+861|Yes|Yes|OWAMP control (RFC 4656)
+862|Yes|Yes|TWAMP control (RFC 5357)
+873|Yes||rsync file synchronization protocol
+888|Yes||cddbp, CD DataBase (CDDB) protocol (CDDBP)
+897|Yes|Yes|Brocade SMI-S RPC
+898|Yes|Yes|Brocade SMI-S RPC SSL
+902|Yes|Yes|VMware ESXi
+903|Yes||VMware ESXi
+953|Yes|Reserved|BIND remote name daemon control (RNDC)
+981|Yes||Remote HTTPS management for firewall devices running embedded Check Point VPN-1 software
+987|Yes||Microsoft Remote Web Workplace, a feature of Windows Small Business Server
+989|Yes|Yes|FTPS Protocol (data), FTP over TLS/SSL
+990|Yes|Yes|FTPS Protocol (control), FTP over TLS/SSL
+991|Yes|Yes|Netnews Administration System (NAS)
+992|Yes|Yes|Telnet protocol over TLS/SSL
+993|Yes|Assigned|Internet Message Access Protocol over TLS/SSL (IMAPS)
+994|Reserved|Reserved|
+995|Yes|Yes|Post Office Protocol 3 over TLS/SSL (POP3S)
+1010|Yes||ThinLinc web-based administration interface
+1011–1020|Reserved|Reserved|
+1023|Reserved|Reserved|
+1024|Reserved|Reserved|Reserved
+1027|Reserved||Reserved
+1028|||Deprecated
+1029|||Microsoft DCOM services
+1058|Yes|Yes|nim, IBM AIX Network Installation Manager (NIM)
+1059|Yes|Yes|nimreg, IBM AIX Network Installation Manager (NIM)
+1080|Yes|Yes|SOCKS proxy
+1085|Yes|Yes|WebObjects
+1098|Yes|Yes|rmiactivation, Java remote method invocation (RMI) activation
+1099|Yes|Assigned|rmiregistry, Java remote method invocation (RMI) registry
+1109|||Reserved – IANA
+1113|Assigned|Licklider Transmission Protocol (LTP) delay tolerant networking protocol
+1119|Yes|Yes|Battle.net chat/game protocol, used by Blizzard's games
+1167|Yes, and SCTP|Yes|Cisco IP SLA (Service Assurance Agent)
+1194|Yes|Yes|OpenVPN
+1198|Yes|Yes|The cajo project Free dynamic transparent distributed computing in Java
+1214|Yes|Yes|Kazaa
+1218|Yes|No|William POWER
+1220|Yes|Assigned|QuickTime Streaming Server administration
+1234|Yes|Yes|Infoseek search agent
+1241|Yes|Yes|Nessus Security Scanner
+1270|Yes|Yes|Microsoft System Center Operations Manager (SCOM) (formerly Microsoft Operations Manager (MOM)) agent
+1293|Yes|Yes|Internet Protocol Security (IPSec)
+1311|Yes|Yes|Windows RxMon.exe
+1314|?|?|Festival Speech Synthesis System server
+1337|Yes||neo4j-shell
+1341|Yes|Yes|Qubes (Manufacturing Execution System)
+1344|Yes|Yes|Internet Content Adaptation Protocol
+1352|Yes|Yes|IBM Lotus Notes/Domino (RPC) protocol
+1360|Yes|Yes|Mimer SQL
+1414|Yes|Yes|IBM WebSphere MQ (formerly known as MQSeries)
+1417|Yes|Yes|Timbuktu Service 1 Port
+1418|Yes|Yes|Timbuktu Service 2 Port
+1419|Yes|Yes|Timbuktu Service 3 Port
+1420|Yes|Yes|Timbuktu Service 4 Port
+1431|Yes||Reverse Gossip Transport Protocol (RGTP), used to access a General-purpose Reverse-Ordered Gossip Gathering System (GROGGS) bulletin board, such as that implemented on the Cambridge University's Phoenix system
+1433|Yes|Yes|Microsoft SQL Server database management system (MSSQL) server
+1434|Yes|Yes|Microsoft SQL Server database management system (MSSQL) monitor
+1492|Yes||Sid Meier's CivNet, a multiplayer remake of the original Sid Meier's Civilization game
+1494|Yes|Yes|Citrix Independent Computing Architecture (ICA)
+1500|Yes||IBM Tivoli Storage Manager server
+1501|Yes||IBM Tivoli Storage Manager client scheduler
+1503|Yes|Yes|Windows Live Messenger (Whiteboard and Application Sharing)
+1512|Yes|Yes|Microsoft's Windows Internet Name Service (WINS)
+1513|Yes|Yes|Garena game client
+1521|Yes|Yes|nCUBE License Manager
+1524|Yes|Yes|ingreslock, ingres
+1527|Yes|Yes|Oracle Net Services, formerly known as SQL*Net
+1533|Yes|Yes|IBM Sametime Virtual Places Chat
+1534|No|Yes|Eclipse Target Communication Framework 
+1540|Yes|Yes|1C:Enterprise server agent (ragent)
+1541|Yes|Yes|1C:Enterprise master cluster manager (rmngr)
+1542|Yes|Yes|1C:Enterprise configuration repository server
+1545|Yes|Yes|1C:Enterprise cluster administration server (RAS)
+1547|Yes|Yes|Laplink
+1550|Yes|Yes|1C:Enterprise debug server
+1560–1590|Yes|Yes|1C:Enterprise cluster working processes
+1581|Yes|Yes|MIL STD 2045-47001 VMF
+1582–1583|Yes||IBM Tivoli Storage Manager server web interface
+1583|?|?|Pervasive PSQL
+1589|Yes|Yes|Cisco VLAN Query Protocol (VQP)
+1604|Yes|Yes|DarkComet remote administration tool (RAT)
+1626|Yes|?|iSketch
+1627|Yes|?|iSketch
+1628|Yes|Yes|LonTalk normal
+1629|Yes|Yes|LonTalk urgent
+1645||Yes|Early deployment of RADIUS before RFC standardization was done using UDP port number 1645. Enabled for compatibility reasons by default on Cisco
+1646||Yes|Old radacct port,
+1666|Yes||Perforce
+1677|Yes|Yes|Novell GroupWise clients in client/server access mode
+1688|Yes||Microsoft Key Management Service (KMS) for Windows Activation
+1701|Yes|Yes|Layer 2 Forwarding Protocol (L2F)
+1707|Yes|Yes|Windward Studios games (vdmplay)
+1716||Yes|America's Army, a massively multiplayer online game (MMO)
+1719|Yes|Yes|H.323 registration and alternate communication
+1720|Yes|Yes|H.323 call signaling
+1723|Yes|Assigned|Point-to-Point Tunneling Protocol (PPTP)
+1755|Yes|Yes|Microsoft Media Services (MMS, ms-streaming)
+1761|Yes|Yes|Novell ZENworks
+1783|||Decomissioned  Port 04/14/00, ms
+1801|Yes|Yes|Microsoft Message Queuing
+1812|Yes|Yes|RADIUS authentication protocol, radius
+1813|Yes|Yes|RADIUS accounting protocol, radius-acct
+1863|Yes|Yes|Microsoft Notification Protocol (MSNP), used by the Microsoft Messenger service and a number of instant messaging Messenger clients
+1880|?|?|Node-RED
+1883|Yes|Yes|MQTT (formerly MQ Telemetry Transport)
+1900|Assigned|Yes|Simple Service Discovery Protocol (SSDP), discovery of UPnP devices
+1935|Yes|Yes|Macromedia Flash Communications Server MX, the precursor to Adobe Flash Media Server before Macromedia's acquisition by Adobe on December 3, 2005
+1967||Yes|Cisco IOS IP Service Level Agreements (IP SLAs) Control Protocol
+1970|Yes|Yes|Netop Remote Control
+1972|Yes|Yes|InterSystems Caché
+1984|Yes|Yes|Big Brother
+1985|Assigned|Yes|Cisco Hot Standby Router Protocol (HSRP)
+1998|Yes|Yes|Cisco X.25 over TCP (XOT) service
+2000|Yes|Yes|Cisco Skinny Client Control Protocol (SCCP)
+2010|?|?|Artemis: Spaceship Bridge Simulator
+2033|Yes|Yes|Civilization IV multiplayer
+2049|Yes, and SCTP|Yes|Network File System (NFS)
+2056|Yes|Yes|Civilization IV multiplayer
+2080|Yes|Yes|Autodesk NLM (FLEXlm)
+2082|Yes||cPanel default
+2083|Yes|Yes|Secure RADIUS Service (radsec)
+2086|Yes|Yes|GNUnet
+2087|Yes||WebHost Manager default SSL
+2095|Yes||cPanel default web mail
+2096|Yes||cPanel default SSL web mail
+2100|Yes||Warzone 2100 multiplayer
+2101|Yes||Networked Transport of RTCM via Internet Protocol (NTRIP)
+2102|Yes|Yes|Zephyr Notification Service server
+2103|Yes|Yes|Zephyr Notification Service serv-hm connection
+2104|Yes|Yes|Zephyr Notification Service hostmanager
+2123|Yes|Yes|GTP control messages (GTP-C)
+2142|Yes|Yes|TDMoIP (TDM over IP)
+2152|Yes|Yes|GTP user data messages (GTP-U)
+2159|Yes|Yes|GDB remote debug port
+2181|Yes|Yes|EForward-document transport system
+2195|Yes||Apple Push Notification Service
+2196|Yes||Apple Push Notification Service, feedback service
+2210|Yes|Yes|NOAAPORT Broadcast Network
+2211|Yes|Yes|EMWIN
+2221|Yes||ESET anti-virus updates
+2222|Yes|Yes|EtherNet/IP implicit messaging for IO data
+2222–2226|Yes||ESET Remote administrator
+2240|Yes|Yes|General Dynamics Remote Encryptor Configuration Information Protocol (RECIPe)
+2261|Yes|Yes|CoMotion master
+2262|Yes|Yes|CoMotion backup
+2302||Yes|ArmA multiplayer
+2303||Yes|ArmA multiplayer (default port for game +1)
+2305||Yes|ArmA multiplayer (default port for game +3)
+2351|Yes||AIM game LAN network port
+2368|Yes||Ghost (blogging platform)
+2369|Yes||Default for BMC Control-M/Server Configuration Agent
+2370|Yes||Default for BMC Control-M/Server, to allow the Control-M/Enterprise Manager to connect to the Control-M/Server
+2372|Yes||Default for K9 Web Protection/parental controls, content filtering agent
+2375|Yes|Reserved|Docker REST API (plain)
+2376|Yes|Reserved|Docker REST API (SSL)
+2377|Yes|Reserved|Docker Swarm cluster management communications
+2379|Yes|Reserved|CoreOS etcd client communication
+2380|Yes|Reserved|CoreOS etcd server communication
+2389|Assigned|Assigned|OpenView Session Mgr
+2399|Yes|Yes|FileMaker Data Access Layer (ODBC/JDBC)
+2401|Yes|Yes|CVS version control system password-based server
+2404|Yes|Yes|IEC 60870-5-104, used to send electric power telecontrol messages between two systems via directly connected data circuits
+2424|Yes||OrientDB database listening for binary client connections
+2427|Yes|Yes|Media Gateway Control Protocol (MGCP) media gateway
+2447|Yes|Yes|ovwdb—OpenView Network Node Manager (NNM) daemon
+2459|Yes|Yes|xrpl
+2480|Yes||OrientDB database listening for HTTP client connections
+2483|Yes|Yes|Oracle database listening for insecure client connections to the listener, replaces port 1521
+2484|Yes|Yes|Oracle database listening for SSL client connections to the listener
+2500|Yes|Yes|NetFS communication
+2501||Yes|NetFS probe
+2535|Yes|Yes|Multicast Address Dynamic Client Allocation Protocol (MADCAP).
+2541|Yes|Yes|LonTalk/IP
+2546–2548|Yes|Yes|EVault data protection services
+2593|Yes|Yes|Ultima Online servers
+2598|Yes||Citrix Independent Computing Architecture (ICA) with Session Reliability; port 1494 without session reliability
+2599|Yes|Yes|Ultima Online servers
+2628|Yes|Yes|DICT 
+2638|Yes|Yes|SQL Anywhere database server
+2710|Yes|Yes|XBT Tracker.
+2727|Yes|Yes|Media Gateway Control Protocol (MGCP) media gateway controller (call agent)
+2775|Yes|Yes|Short Message Peer-to-Peer (SMPP)
+2809|Yes|Yes|corbaloc:iiop URL, per the CORBA 3.0.3 specification
+2811|Yes|Yes|gsi ftp, per the GridFTP specification
+2827|Yes||I2P BOB Bridge
+2944|Yes|Yes|Megaco text H.248
+2945|Yes|Yes|Megaco binary (ASN.1) H.248
+2947|Yes|Yes|gpsd, GPS daemon
+2948|Yes|Yes|WAP push Multimedia Messaging Service (MMS)
+2949|Yes|Yes|WAP push secure (MMS)
+2967|Yes|Yes|Symantec System Center agent (SSC-AGENT)
+3000|Yes||Cloud9 IDE server
+3004|Yes||iSync
+3020|Yes|Yes|Common Internet File System (CIFS). See also port 445 for Server Message Block (SMB), a dialect of CIFS.
+3050|Yes|Yes|gds-db (Interbase/Firebird databases)
+3052|Yes|Yes|APC PowerChute Network
+3074|Yes|Yes|Xbox LIVE and Games for Windows – Live
+3101|Yes||BlackBerry Enterprise Server communication protocol
+3128|Yes|?|Squid caching web proxy
+3225|Yes|Yes|Fibre Channel over IP (FCIP)
+3233|Yes|Yes|WhiskerControl research control protocol
+3260|Yes|Yes|iSCSI
+3268|Yes|Yes|msft-gc, Microsoft Global Catalog (LDAP service which contains data from Active Directory forests)
+3269|Yes|Yes|msft-gc-ssl, Microsoft Global Catalog over SSL (similar to port 3268, LDAP over SSL)
+3283|Yes|Yes|Net Assistant, a predecessor to Apple Remote Desktop
+3290||Yes|Virtual Air Traffic Simulation (VATSIM) network voice communication
+3305|Yes|Yes|Odette File Transfer Protocol (OFTP)
+3306|Yes|Assigned|MySQL database system
+3323|Yes|Yes|DECE GEODI Server
+3332||Yes|Thundercloud DataPath Overlay Control
+3333|Yes||Eggdrop, an IRC bot default port
+3351|?|?|Pervasive PSQL
+3386|Yes|Yes|GTP' 3GPP GSM/UMTS CDR logging protocol
+3389|Yes|Yes|Microsoft Terminal Server (RDP) officially registered as Windows Based Terminal (WBT)
+3396|Yes|Yes|Novell NDPS Printer Agent
+3412|Yes|Yes|xmlBlaster
+3423|Yes||Xware xTrm Communication Protocol
+3424|Yes||Xware xTrm Communication Protocol over SSL
+3455|Yes|Yes|Resource Reservation Protocol (RSVP)
+3478|Yes|Yes|STUN, a protocol for NAT traversal
+3479|Yes|Yes|PlayStation Network
+3480|Yes|Yes|PlayStation Network
+3483||Yes|Slim Devices discovery protocol
+3493|Yes|Yes|Network UPS Tools (NUT)
+3516|Yes|Yes|Smartcard Port
+3527||Yes|Microsoft Message Queuing
+3535|Yes||SMTP alternate
+3544||Yes|Teredo tunneling
+3632|Yes|Assigned|Distcc, distributed compiler
+3645|Yes|Yes|Cyc
+3659|Yes|Yes|Apple SASL, used by Mac OS X Server Password Server
+3667|Yes|Yes|Information Exchange
+3689|Yes|Assigned|Digital Audio Access Protocol (DAAP), used by Apple's iTunes and AirPlay
+3690|Yes|Yes|Subversion (SVN) version control system
+3702|Yes|Yes|Web Services Dynamic Discovery (WS-Discovery), used by various components of Windows Vista and later
+3724|Yes|Yes|Some Blizzard games
+3725|Yes|Yes|Netia NA-ER Port
+3749|Yes|Yes|CimTrak registered port
+3768|Yes|Yes|RBLcheckd server daemon
+3784||Yes|Bidirectional Forwarding Detection (BFD)for IPv4 and IPv6 (Single Hop) (RFC 5881)
+3785||Yes|VoIP program used by Ventrilo
+3799||Yes|RADIUS change of authorization
+3804|Yes|Yes|Harman Professional HiQnet protocol
+3825|Yes||RedSeal Networks client/server connection
+3826|Yes|Yes|WarMUX game server
+3835|Yes||RedSeal Networks client/server connection
+3830|Yes|Yes|System Management Agent, developed and used by Cerner to monitor and manage solutions
+3856|Yes|Yes|ERP Server Application used by F10 Software
+3880|Yes|Yes|IGRS
+3868|Yes, and SCTP||Diameter base protocol (RFC 3588)
+3872|Yes||Oracle Enterprise Manager Remote Agent
+3900|Yes||udt_os, IBM UniData UDT OS
+3960||Yes|Warframe online interaction
+3962||Yes|Warframe online interaction
+3978|Yes|Yes|OpenTTD game (masterserver and content service)
+3979|Yes|Yes|OpenTTD game
+3999|Yes|Yes|Norman distributed scanning service
+4000|Yes|Yes|Diablo II game
+4001|Yes||Microsoft Ants game
+4018|Yes|Yes|Protocol information and warnings
+4035|Yes||IBM Rational Developer for System z Remote System Explorer Daemon
+4045|Yes|Yes|Solaris lockd NFS lock daemon/manager
+4050|Yes||Mud Master Chat protocol (MMCP) - Peer-to-peer communications between MUD clients.
+4069||Yes|Minger Email Address Verification Protocol
+4070|Yes|Yes|Amazon Echo Dot (Amazon Alexa) streaming connection with Spotify
+4089|Yes|Yes|OpenCORE Remote Control Service
+4090|Yes|Yes|Kerio
+4093|Yes|Yes|PxPlus Client server interface ProvideX
+4096|Yes|Yes|Ascom Timeplex Bridge Relay Element (BRE)
+4105|Yes|Yes|Shofar (ShofarNexus)
+4111|Yes|Assigned|Xgrid
+4116|Yes|Yes|Smartcard-TLS
+4125|Yes||Microsoft Remote Web Workplace administration
+4172|Yes|Yes|Teradici PCoIP
+4190|Yes||ManageSieve
+4198|Yes|Yes|Couch Potato Android app
+4201|Yes||TinyMUD and various derivatives
+4222|Yes||NATS server default port
+4226|Yes|Yes|Aleph One, a computer game
+4242|Yes||Orthanc – DICOM server
+4243|Yes||Docker implementations, redistributions, and setups default
+4244|Yes|Yes|Viber
+4303|Yes|Yes|Simple Railroad Command Protocol (SRCP)
+4307|Yes||TrueConf Client - TrueConf Server media data exchange
+4321|Yes||Referral Whois (RWhois) Protocol
+4444|Yes|Yes|Oracle WebCenter Content: Content Server—Intradoc Socket port. (formerly known as Oracle Universal Content Management).
+4444–4445|Yes||I2P HTTP/S proxy
+4486|Yes|Yes|Integrated Client Message Service (ICMS)
+4488|Yes|Assigned|Apple Wide Area Connectivity Service, used by Back to My Mac
+4500|Assigned|Yes|IPSec NAT Traversal (RFC 3947, RFC 4306)
+4502–4534|Yes||Microsoft Silverlight connectable ports under non-elevated trust
+4505–4506|Yes||Salt master
+4534||Yes|Armagetron Advanced server default
+4560|Yes||default Log4j socketappender port
+4567|Yes||Sinatra default server port in development mode (HTTP)
+4569||Yes|Inter-Asterisk eXchange (IAX2)
+4604|Yes||Identity Registration Protocol
+4605|Yes||Direct End to End Secure Chat Protocol
+4610–4640|Yes||QualiSystems TestShell Suite Services
+4662|Yes|Yes|OrbitNet Message Service
+4664|Yes||Google Desktop Search
+4672||Yes|Default for older versions of eMule
+4711|Yes||eMule optional web interface
+4713|Yes||PulseAudio sound server
+4728|Yes||Computer Associates Desktop and Server Management (DMP)/Port Multiplexer
+4730|Yes|Yes|Gearman's job server
+4739|Yes|Yes|IP Flow Information Export
+4747|Yes||Apprentice
+4753|Yes|Yes|SIMON (service and discovery)
+4789||Yes|Virtual eXtensible Local Area Network (VXLAN)
+4791||Yes|IP Routable RocE (RoCEv2)
+4840|Yes|Yes|OPC UA Connection Protocol (TCP) and OPC UA Multicast Datagram Protocol (UDP) for OPC Unified Architecture from OPC Foundation
+4843|Yes|Yes|OPC UA TCP Protocol over TLS/SSL for OPC Unified Architecture from OPC Foundation
+4847|Yes|Yes|Web Fresh Communication, Quadrion Software & Odorless Entertainment
+4848|Yes||Java, Glassfish Application Server administration default
+4894|Yes|Yes|LysKOM Protocol A
+4944|No|Yes|DrayTek DSL Status Monitoring
+4949|Yes||Munin Resource Monitoring Tool
+4950|Yes|Yes|Cylon Controls UC32 Communications Port
+5000|Yes||UPnP—Windows network device interoperability
+5000–5500|No|Yes|League of Legends, a multiplayer online battle arena video game
+5001|Yes||Slingbox and Slingplayer
+5002|Yes||ASSA ARX access control system
+5003|Yes|Assigned|FileMaker – name binding and transport
+5004|Yes, and DCCP|Yes|Real-time Transport Protocol media data (RTP) (RFC 3551, RFC 4571)
+5005|Yes, and DCCP|Yes|Real-time Transport Protocol control protocol (RTCP) (RFC 3551, RFC 4571)
+5010|Yes|Yes|Registered to: TelePath (the IBM FlowMark workflow-management system messaging platform)The TCP port is now used for: IBM WebSphere MQ Workflow
+5011|Yes|Yes|TelePath (the IBM FlowMark workflow-management system messaging platform)
+5025|Yes|Yes|scpi-raw Standard Commands for Programmable Instruments
+5029||Yes|Sonic Robo Blast 2 and Sonic Robo Blast 2 Kart servers
+5031|Yes|Yes|AVM CAPI-over-TCP (ISDN over Ethernet tunneling)
+5037|Yes||Android ADB server
+5044|Yes||Standard port in Filebeats/Logstash implementation of Lumberjack protocol.
+5048|Yes||Texai Message Service
+5050|Yes||Yahoo! Messenger
+5051|Yes||ita-agent Symantec Intruder Alert
+5060|Yes|Yes|Session Initiation Protocol (SIP)
+5061|Yes||Session Initiation Protocol (SIP) over TLS
+5062|Yes|Yes|Localisation access
+5064|Yes|Yes|EPICS Channel Access server
+5065|Assigned|Yes|EPICS Channel Access repeater beacon
+5070|Yes|No|Binary Floor Control Protocol (BFCP)
+5084|Yes|Yes|EPCglobal Low Level Reader Protocol (LLRP)
+5085|Yes|Yes|EPCglobal Low Level Reader Protocol (LLRP) over TLS
+5090|Yes|Yes|3CX Phone System 3CX Tunnel Protocol, 3CX App API, 3CX Session Border Controller
+5093||Yes|SafeNet, Inc Sentinel LM, Sentinel RMS, License Manager, client-to-server
+5099|Yes|Yes|SafeNet, Inc Sentinel LM, Sentinel RMS, License Manager, server-to-server
+5104|Yes||IBM Tivoli Framework NetCOOL/Impact HTTP Service
+5121|Yes||Neverwinter Nights
+5124|Yes|Yes|TorgaNET (Micronational Darknet)
+5125|Yes|Yes|TorgaNET (Micronational Intelligence Darknet)
+5150|Yes|Yes|ATMP Ascend Tunnel Management Protocol
+5151|Yes||ESRI SDE Instance
+5154|Yes|Yes|BZFlag
+5172|Yes||PC over IP Endpoint Management
+5190|Yes|Yes|AOL Instant Messenger protocol.
+5198||Yes|EchoLink VoIP Amateur Radio Software (Voice)
+5199||Yes|EchoLink VoIP Amateur Radio Software (Voice)
+5200|Yes||EchoLink VoIP Amateur Radio Software (Information)
+5201|Yes|Yes|Iperf3 (Tool for measuring TCP and UDP bandwidth performance)
+5222|Yes|Reserved|Extensible Messaging and Presence Protocol (XMPP) client connection
+5223|Yes||Apple Push Notification Service
+5228|Yes||HP Virtual Room Service
+5242|Yes|Yes|Viber
+5243|Yes|Yes|Viber
+5246||Yes|Control And Provisioning of Wireless Access Points (CAPWAP) CAPWAP control
+5247||Yes|Control And Provisioning of Wireless Access Points (CAPWAP) CAPWAP data
+5269|Yes||Extensible Messaging and Presence Protocol (XMPP) server-to-server connection
+5280|Yes||Extensible Messaging and Presence Protocol (XMPP)
+5281|Yes||Extensible Messaging and Presence Protocol (XMPP)
+5298|Yes|Yes|Extensible Messaging and Presence Protocol (XMPP)
+5310|Assigned|Yes|Outlaws, a 1997 first-person shooter video game
+5318|Yes|Reserved|Certificate Management over CMS
+5349|Yes/No|Yes/No|STUN over TLS/DTLS, a protocol for NAT traversal
+5351|Reserved|Yes|NAT Port Mapping Protocol and Port Control Protocol—client-requested configuration for connections through network address translators and firewalls
+5353|Assigned|Yes|Multicast DNS (mDNS)
+5355|Yes|Yes|Link-Local Multicast Name Resolution (LLMNR), allows hosts to perform name resolution for hosts on the same local link (only provided by Windows Vista and Server 2008)
+5357|Yes|Yes|Web Services for Devices (WSDAPI) (only provided by Windows Vista, Windows 7 and Server 2008)
+5358|Yes|Yes|WSDAPI Applications to Use a Secure Channel (only provided by Windows Vista, Windows 7 and Server 2008)
+5394||Yes|Kega Fusion, a Sega multi-console emulator
+5402|Yes|Yes|Multicast File Transfer Protocol (MFTP)
+5405|Yes|Yes|NetSupport Manager
+5412|Yes|Yes|IBM Rational Synergy (Telelogic Synergy) (Continuus CM) Message Router
+5413|Yes|Yes|Wonderware SuiteLink service
+5417|Yes|Yes|SNS Agent
+5421|Yes|Yes|NetSupport Manager
+5432|Yes|Assigned|PostgreSQL database system
+5433|Yes||Bouwsoft file/webserver
+5445||Yes|Cisco Unified Video Advantage
+5480|Yes||VMware VAMI (Virtual Appliance Management Infrastructure)—used for initial setup of various administration settings on Virtual Appliances designed using the VAMI architecture.
+5481|Yes||Schneider Electric's ClearSCADA (SCADA implementation for Windows) — used for client-to-server communication.
+5495|Yes||IBM Cognos TM1 Admin server
+5498|Yes||Hotline tracker server connection
+5499||Yes|Hotline tracker server discovery
+5500|Yes||Hotline control connection
+5501|Yes||Hotline file transfer connection
+5517|Yes||Setiqueue Proxy server client for SETI@Home project
+5550|Yes||Hewlett-Packard Data Protector
+5554|Yes|Yes|Fastboot default wireless port
+5555|Yes|Yes|Oracle WebCenter Content: Inbound Refinery—Intradoc Socket port. (formerly known as Oracle Universal Content Management). Port though often changed during installation
+5556|Yes|Yes|Freeciv, Oracle WebLogic Server Node Manager
+5568|Yes|Yes|Session Data Transport (SDT), a part of Architecture for Control Networks (ACN)
+5601|Yes||Kibana
+5631|Yes||pcANYWHEREdata, Symantec pcAnywhere (version 7.52 and later data
+5632||Yes|pcANYWHEREstat, Symantec pcAnywhere (version 7.52 and later) status
+5656|Yes||IBM Lotus Sametime p2p file transfer
+5666|Yes||NRPE (Nagios)
+5667|Yes||NSCA (Nagios)
+5670|Yes||FILEMQ ZeroMQ File Message Queuing Protocol
+5671|Yes|Assigned|Advanced Message Queuing Protocol (AMQP) over TLS
+5672|Yes, and SCTP|Assigned|Advanced Message Queuing Protocol (AMQP)
+5683|Yes|Yes|Constrained Application Protocol (CoAP)
+5684|Yes/No|Yes|Constrained Application Protocol Secure (CoAPs)
+5693|Yes||Nagios Cross Platform Agent (NCPA)
+5701|Yes||Hazelcast default communication port
+5722|Yes|Yes|Microsoft RPC, DFSR (SYSVOL) Replication Service
+5718|Yes||Microsoft DPM Data Channel (with the agent coordinator)
+5719|Yes||Microsoft DPM Data Channel (with the protection agent)
+5723|Yes||System Center Operations Manager
+5724|Yes||Operations Manager Console
+5741|Yes|Yes|IDA Discover Port 1
+5742|Yes|Yes|IDA Discover Port 2
+5800|Yes||VNC Remote Frame Buffer RFB protocol over HTTP
+5900|Yes|Yes|Remote Frame Buffer protocol (RFB)
+5931|Yes|Yes|AMMYY admin Remote Control
+5938|Yes|Yes|TeamViewer remote desktop protocol
+5984|Yes|Yes|CouchDB database server
+5985|Yes||Windows PowerShell Default psSession Port
+5986|Yes||Windows PowerShell Default psSession Port
+5988–5989|Yes||CIM-XML (DMTF Protocol)
+6000–6063|Yes|Yes|X11—used between an X client and server over the network
+6005|Yes||Default for BMC Software Control-M/Server—Socket used for communication between Control-M processes—though often changed during installation
+6009|Yes||JD Edwards EnterpriseOne ERP system JDENet messaging client listener
+6050|Yes||Arcserve backup
+6051|Yes||Arcserve backup
+6086|Yes||Peer Distributed Transfer Protocol (PDTP), FTP like file server in a P2P network
+6100|Yes||Vizrt System
+6101|Yes||Backup Exec Agent Browser
+6110|Yes|Yes|softcm, HP Softbench CM
+6111|Yes|Yes|spc, HP Softbench Sub-Process Control
+6112|Yes|Yes|dtspcd, execute commands and launch applications remotely
+6113|Yes||Club Penguin Disney online game for kids, Used by some Blizzard games
+6136|Yes||ObjectDB database server
+6159|Yes||ARINC 840 EFB Application Control Interface
+6200|Yes||Oracle WebCenter Content Portable: Content Server (With Native UI) and Inbound Refinery
+6201|Yes||Oracle WebCenter Content Portable: Admin
+6225|Yes||Oracle WebCenter Content Portable: Content Server Web UI
+6227|Yes||Oracle WebCenter Content Portable: JavaDB
+6240|Yes||Oracle WebCenter Content Portable: Capture
+6244|Yes|Yes|Oracle WebCenter Content Portable: Content Server—Intradoc Socket port
+6255|Yes|Yes|Oracle WebCenter Content Portable: Inbound Refinery—Intradoc Socket port
+6257||Yes|WinMX (see also 6699)
+6260|Yes|Yes|planet M.U.L.E.
+6262|Yes||Sybase Advantage Database Server
+6343||Yes|SFlow, sFlow traffic monitoring
+6346|Yes|Yes|gnutella-svc, gnutella (FrostWire, Limewire, Shareaza, etc.)
+6347|Yes|Yes|gnutella-rtr, Gnutella alternate
+6350|Yes|Yes|App Discovery and Access Protocol
+6379|Yes||Redis key-value data store
+6389|Yes||EMC CLARiiON
+6432|Yes||PgBouncer—A connection pooler for PostgreSQL
+6436|Yes||Leap Motion Websocket Server TLS
+6437|Yes||Leap Motion Websocket Server
+6444|Yes|Yes|Sun Grid Engine Qmaster Service
+6445|Yes|Yes|Sun Grid Engine Execution Service
+6463–6472|Yes||Discord RPC
+6464|Yes|Yes|Port assignment for medical device communication in accordance to IEEE 11073-20701
+6502|Yes|Yes|Netop Remote Control
+6513|Yes||NETCONF over TLS
+6514|Yes||Syslog over TLS
+6515|Yes|Yes|Elipse RPC Protocol (REC)
+6516|||Windows Admin Center
+6543|Yes||Pylons project#Pyramid Default Pylons Pyramid web service port
+6556|Yes||Check MK Agent
+6566|Yes||SANE (Scanner Access Now Easy)—SANE network scanner daemon
+6560–6561|Yes||Speech-Dispatcher daemon
+6571|||Windows Live FolderShare client
+6600|Yes||Microsoft Hyper-V Live
+6601|Yes||Microsoft Forefront Threat Management Gateway
+6602|Yes||Microsoft Windows WSS Communication
+6619|Yes|Yes|odette-ftps, Odette File Transfer Protocol (OFTP) over TLS/SSL
+6622|Yes|Yes|Multicast FTP
+6653|Yes|Assigned|OpenFlow
+6660–6664|Yes||Internet Relay Chat (IRC)
+6665–6669|Yes||Internet Relay Chat (IRC)
+6679|Yes|Yes|Osorno Automation Protocol (OSAUT)
+6690|Yes||Synology Cloud station
+6697|Yes||IRC SSL (Secure Internet Relay Chat)—often used
+6699|Yes||WinMX (see also 6257)
+6715|Yes||AberMUD and derivatives default port
+6771||Yes|BitTorrent Local Peer Discovery
+6783–6785|Yes||Splashtop Remote server broadcast
+6881–6887|Yes|Yes|BitTorrent part of full range of ports used most often
+6888|Yes|Yes|MUSE
+6889–6890|Yes|Yes|BitTorrent part of full range of ports used most often
+6891–6900|Yes|Yes|BitTorrent part of full range of ports used most often
+6891–6900|Yes|Yes|Windows Live Messenger (File transfer)
+6901|Yes|Yes|Windows Live Messenger (Voice)
+6902–6968|Yes|Yes|BitTorrent part of full range of ports used most often
+6969|Yes|Yes|acmsoda
+6970–6999|Yes|Yes|BitTorrent part of full range of ports used most often
+7000|Yes||Default for Vuze's built-in HTTPS Bittorrent Tracker
+7001|Yes||Avira Server Management Console
+7002|Yes||Default for BEA WebLogic Server's HTTPS server, though often changed during installation
+7005|Yes||Default for BMC Software Control-M/Server and Control-M/Agent for Agent-to-Server, though often changed during installation
+7006|Yes||Default for BMC Software Control-M/Server and Control-M/Agent for Server-to-Agent, though often changed during installation
+7010|Yes||Default for Cisco AON AMC (AON Management Console)
+7022|Yes||Database mirroring endpoints
+7023||Yes|Bryan Wilcutt T2-NMCS Protocol for SatCom Modems
+7025|Yes||Zimbra LMTP —local mail delivery
+7047|Yes||Zimbra conversion server
+7070|Yes|Yes/No|Real Time Streaming Protocol (RTSP), used by QuickTime Streaming Server. TCP is used by default, UDP is used as an alternate.
+7133|Yes||Enemy Territory: Quake Wars
+7144|Yes||Peercast
+7145|Yes||Peercast
+7171|Yes||Tibia
+7262|Yes|Yes|CNAP (Calypso Network Access Protocol)
+7272|Yes|Yes|WatchMe - WatchMe Monitoring
+7306|Yes||Zimbra mysql 
+7307|Yes||Zimbra mysql 
+7312||Yes|Sibelius License Server
+7396|Yes||Web control interface for Folding@home v7.3.6 and later
+7400|Yes|Yes|RTPS (Real Time Publish Subscribe) DDS Discovery
+7401|Yes|Yes|RTPS (Real Time Publish Subscribe) DDS User-Traffic
+7402|Yes|Yes|RTPS (Real Time Publish Subscribe) DDS Meta-Traffic
+7471|Yes||Stateless Transport Tunneling (STT)
+7473|Yes||Rise: The Vieneo Province
+7474|Yes||Neo4J Server webadmin
+7478|Yes||Default port used by Open iT Server.
+7542|Yes|Yes|Saratoga file transfer protocol
+7547|Yes|Yes|CPE WAN Management Protocol (CWMP) Technical Report 069
+7575||Yes|Populous: The Beginning server
+7624|Yes|Yes|Instrument Neutral Distributed Interface
+7631|Yes||ERLPhase
+7634|Yes||hddtemp—Utility to monitor hard drive temperature
+7652–7654|Yes||I2P anonymizing overlay network
+7655||Yes|I2P SAM Bridge Socket API
+7656–7660|Yes||I2P anonymizing overlay network
+7670|Yes||BrettspielWelt BSW Boardgame Portal
+7680|Yes||Delivery Optimization for Windows 10
+7687|Yes||Bolt database connection
+7707–7708||Yes|Killing Floor
+7717||Yes|Killing Floor
+7777|Yes||iChat server file transfer proxy
+7777–7788|Yes|Yes|Unreal Tournament series default server
+7831|Yes||Default used by Smartlaunch Internet Cafe Administration software
+7880|Yes|Yes|PowerSchool Gradebook Server
+7890|Yes||Default that will be used by the iControl Internet Cafe Suite Administration software
+7915|Yes||Default for YSFlight server
+7935|Yes||Fixed port used for Adobe Flash Debug Player to communicate with a debugger (Flash IDE, Flex Builder or fdb).
+7946|Yes|Yes|Docker Swarm communication among nodes
+7990|Yes||Atlassian Bitbucket (default port)
+8000|Yes||Commonly used for Internet radio streams such as SHOUTcast
+8005|Yes||Tomcat remote shutdown
+8006|Yes||Quest AppAssure 5 API
+8007|Yes||Quest AppAssure 5 Engine
+8008|Yes|Yes|Alternative port for HTTP. See also ports 80 and 8080.
+8009|Yes||Apache JServ Protocol (ajp13)
+8010|Yes|?|Buildbot Web status page
+8042|?|?|Orthanc – REST API over HTTP
+8069|Yes||OpenERP 5.0 XML-RPC protocol
+8070|Yes||OpenERP 5.0 NET-RPC protocol
+8074|Yes|Yes|Gadu-Gadu
+8075|Yes||Killing Floor web administration interface
+8080|Yes|Yes|Alternative port for HTTP. See also ports 80 and 8008.
+8088|Yes||Asterisk management access via HTTP
+8089|Yes|No|Splunk daemon management
+8090|?|?|Atlassian Confluence
+8091|?|?|CouchBase web administration
+8092|?|?|CouchBase API
+8111|Yes||JOSM Remote Control
+8112|Yes||PAC Pacifica Coin
+8116||Yes|Check Point Cluster Control Protocol
+8118|Yes||Privoxy—advertisement-filtering Web proxy
+8123|Yes||Polipo Web proxy
+8139|Yes||Puppet (software) Client agent
+8140|Yes||Puppet (software) Master server
+8172|Yes||Microsoft Remote Administration for IIS Manager
+8184|Yes||NCSA Brown Dog Data Access Proxy
+8194–8195|?|?|Bloomberg Terminal
+8200|Yes||GoToMyPC
+8222|?|?|VMware VI Web Access via HTTP
+8243|Yes|Yes|HTTPS listener for Apache Synapse
+8245|Yes||Dynamic DNS for at least No-IP and DyDNS
+8280|Yes|Yes|HTTP listener for Apache Synapse
+8281|Yes||HTTP Listener for Gatecraft Plugin
+8291|Yes||Winbox—Default on a MikroTik RouterOS for a Windows application used to administer MikroTik RouterOS
+8303||Yes|Teeworlds Server
+8332|Yes||Bitcoin JSON-RPC server
+8333|Yes||Bitcoin
+8333|Yes||Zip Code Technology
+8337|Yes||VisualSVN Distributed File System Service (VDFS)
+8384|Yes||Syncthing web GUI
+8388|Yes||Shadowsocks proxy server
+8443|Yes||SW Soft Plesk Control Panel
+8444|Yes||Bitmessage
+8448|Yes|?|Matrix homeserver federation over HTTPS
+8484|Yes||MapleStory Login Server
+8500|Yes||Adobe ColdFusion built-in web server
+8530|?|?|Windows Server Update Services over HTTP
+8531|?|?|Windows Server Update Services over HTTPS
+8580|?|?|Freegate, an Internet anonymizer and proxy tool
+8629|Yes||Tibero database
+8642|Yes||Lotus Notes Traveler auto synchronization for Windows Mobile and Nokia devices
+8691|Yes||Ultra Fractal, a fractal generation and rendering software application – distributed calculations over networked computers
+8765|Yes|?|Default port of a local GUN relay peer that the Internet Archive
+8767||Yes|Voice channel of TeamSpeak 2,
+8834|?|?|Nessus, a vulnerability scanner – remote XML-RPC web server
+8840|?|?|Opera Unite, an extensible framework for web applications
+8880|Yes||Alternate port of CDDB (Compact Disc Database) protocol, used to look up audio CD (compact disc) information over the Internet. See also port 888.
+8883|Yes|Yes|Secure MQTT (MQTT over TLS)
+8887|?|?|HyperVM over HTTP
+8888|?|?|HyperVM over HTTPS
+8889|?|?|MAMP
+8983|?|?|Apache Solr
+8997|?|?|Alternate port for I2P Monotone Proxy
+8998|?|?|I2P Monotone Proxy
+8999|?|?|Alternate port for I2P Monotone Proxy
+9000|Yes||SonarQube Web Server
+9001|Yes|Yes|ETL Service Manager
+9002|||Newforma Server comms
+9006|||De-Commissioned Port
+9030|Yes||Tor often used
+9042|Yes||Apache Cassandra native protocol clients
+9043|Yes||WebSphere Application Server Administration Console secure
+9050–9051|Yes||Tor (SOCKS-5 proxy client)
+9060|Yes||WebSphere Application Server Administration Console
+9080|Yes|Yes|glrpc, Groove Collaboration software GLRPC
+9090|Yes||Prometheus metrics server
+9091|Yes||Openfire Administration Console (SSL Secured)
+9092|Yes||H2 (DBMS) Database Server
+9100|Yes|Assigned|PDL Data Stream, used for printing to certain network printers
+9101|Yes|Yes|Bacula Director
+9102|Yes|Yes|Bacula File Daemon
+9103|Yes|Yes|Bacula Storage Daemon
+9119|Yes|Yes|MXit Instant Messenger
+9150|Yes||Tor Browser
+9191|Yes||Sierra Wireless Airlink
+9199|Yes||Avtex LLC—qStats
+9200|Yes||Elasticsearch—default Elasticsearch port
+9217|Yes||iPass Platform Service
+9293|Yes||Sony PlayStation RemotePlay
+9300|Yes||IBM Cognos BI
+9303||Yes|D-Link Shareport Share storage and MFP printers
+9306|Yes||Sphinx Native API
+9309|Yes|Yes|Sony PlayStation Vita Host Collaboration WiFi Data Transfer
+9312|Yes||Sphinx SphinxQL
+9332|Yes||Litecoin JSON-RPC server
+9333|Yes||Litecoin
+9339|Yes||Clash of Clans, a mobile freemium strategy video game
+9389|Yes|Yes|adws, Microsoft AD DS Web Services, Powershell uses this port
+9392|Yes|?|OpenVAS Greenbone Security Assistant web interface
+9418|Yes|Yes|git, Git pack transfer service
+9419|Yes||MooseFS distributed file system – master control port
+9420|Yes||MooseFS distributed file system – master command port
+9421|Yes||MooseFS distributed file system – master client port
+9422|Yes||MooseFS distributed file system – Chunkservers
+9425|Yes||MooseFS distributed file system – CGI server
+9443|Yes||VMware Websense Triton console (HTTPS port used for accessing and administrating a vCenter Server via the Web Management Interface)
+9535|Yes|Yes|mngsuite, LANDesk Management Suite Remote Control
+9536|Yes|Yes|laes-bf, IP Fabrics Surveillance buffering function
+9600|No|Yes|Factory Interface Network Service (FINS), a network protocol used by Omron programmable logic controllers
+9675|Yes|Yes|Spiceworks Desktop, IT Helpdesk Software
+9676|Yes|Yes|Spiceworks Desktop, IT Helpdesk Software
+9695|?|?|Content centric networking (CCN, CCNx)
+9785|Yes|Yes|Viber
+9800|Yes|Yes|WebDAV Source
+9875|Yes||Club Penguin Disney online game for kids
+9898|Yes||Tripwire—File Integrity Monitoring Software
+9899||Yes|SCTP tunneling (port number used in SCTP packets encapsulated in UDP, RFC 6951)
+9901|Yes||Banana for Apache Solr
+9981|Yes||Tvheadend HTTP server (web interface)
+9982|Yes||Tvheadend HTSP server (Streaming protocol)
+9987||Yes|TeamSpeak 3 server default (voice) port (for the conflicting service see the IANA list)
+9993||Yes|ZeroTier Default port for ZeroTier
+9997|Yes||Splunk port for communication between the forwarders and indexers
+9999|||Urchin Web Analytics
+10000|Yes|Yes|Network Data Management Protocol
+10000–20000|No|Yes|Used on VoIP networks for receiving and transmitting voice telephony traffic which includes Google Voice via the OBiTalk ATA devices as well as on the MagicJack and Vonage ATA network devices.
+10001||Yes|Ubiquiti UniFi access points broadcast to 255.255.255.255:10001 (UDP) to locate the controller(s)
+10009|Yes|Yes|CrossFire, a multiplayer online First Person Shooter
+10010|Yes||Open Object Rexx (ooRexx) rxapi daemon
+10024|Yes||Zimbra smtp 
+10025|Yes||Zimbra smtp 
+10042|Yes||Mathoid server
+10050|Yes|Yes|Zabbix agent
+10051|Yes|Yes|Zabbix trapper
+10080|Yes||Touhou fight games (Immaterial and Missing Power, Scarlet Weather Rhapsody, Hisoutensoku, Hopeless Masquerade and Urban Legend in Limbo)
+10110|Yes|Yes|NMEA 0183 Navigational Data. Transport of NMEA 0183 sentences over TCP or UDP
+10172|Yes||Intuit Quickbooks client
+10200|Yes||FRISK Software International's fpscand virus scanning daemon for Unix platforms
+10201–10204|Yes||FRISK Software International's f-protd virus scanning daemon for Unix platforms
+10212|Yes||GE Intelligent Platforms Proficy HMI/SCADA – CIMPLICITY WebView
+10308|?|?|Lock On: Modern Air Combat
+10480|?|?|SWAT 4 Dedicated Server
+10505||Yes|BlueStacks (android simulator) broadcast
+10514|Yes|Yes|TLS-enabled Rsyslog (default by convention)
+10823||Yes|Farming Simulator 2011
+10891|Yes||Jungle Disk (this port is opened by the Jungle Disk Monitor service on the localhost)
+10933|Yes|No|Octopus Deploy Tentacle deployment agent
+11001|Yes|Yes|metasys ( Johnson Controls Metasys java AC control environment )
+11111|Yes||RiCcI, Remote Configuration Interface (Redhat Linux)
+11112|Yes|Yes|ACR/NEMA Digital Imaging and Communications in Medicine (DICOM)
+11211|Yes|Yes|memcached
+11214|Yes|Yes|memcached incoming SSL proxy
+11215|Yes|Yes|memcached internal outgoing SSL proxy
+11235|||Savage: Battle for Newerth
+11311|Yes|Yes|Robot Operating System master
+11371|Yes|Yes|OpenPGP HTTP key server
+11753|Yes||OpenRCT2 multiplayer
+12000|Yes|Yes|CubeForm, Multiplayer SandBox Game
+12012||Yes|Audition Online Dance Battle, Korea Server—Status/Version Check
+12013|Yes|Yes|Audition Online Dance Battle, Korea Server
+12035||Yes|Second Life, used for server UDP in-bound
+12043|Yes||Second Life, used for LSL HTTPS in-bound
+12046|Yes||Second Life, used for LSL HTTP in-bound
+12201|Yes|Yes|Graylog Extended Log Format (GELF)
+12222||Yes|Light Weight Access Point Protocol (LWAPP) LWAPP data (RFC 5412)
+12223||Yes|Light Weight Access Point Protocol (LWAPP) LWAPP control (RFC 5412)
+12345|Yes|Yes|Cube World
+12443|Yes||IBM HMC web browser management access over HTTPS instead of default port 443
+12489|Yes||NSClient/NSClient++/NC_Net (Nagios)
+12975|Yes||LogMeIn Hamachi (VPN tunnel software; also port 32976)—used to connect to Mediation Server (bibi.hamachi.cc); will attempt to use SSL (TCP port 443) if both 12975 & 32976 fail to connect
+13000–13050||Yes|Second Life, used for server UDP in-bound
+13008|Yes|Yes|CrossFire, a multiplayer online First Person Shooter
+13075|Yes||Default for BMC Software Control-M/Enterprise Manager Corba communication, though often changed during installation
+13400|Yes|Yes|ISO 13400 Road vehicles — Diagnostic communication over Internet Protocol(DoIP)
+13720|Yes|Yes|Symantec NetBackup—bprd (formerly VERITAS)
+13721|Yes|Yes|Symantec NetBackup—bpdbm (formerly VERITAS)
+13724|Yes|Yes|Symantec Network Utility—vnetd (formerly VERITAS)
+13782|Yes|Yes|Symantec NetBackup—bpcd (formerly VERITAS)
+13783|Yes|Yes|Symantec VOPIED protocol (formerly VERITAS)
+13785|Yes|Yes|Symantec NetBackup Database—nbdb (formerly VERITAS)
+13786|Yes|Yes|Symantec nomdb (formerly VERITAS)
+14550||Yes|MAVLink Ground Station Port
+14567||Yes|Battlefield 1942 and mods
+15000|Yes||psyBNC
+15009|Yes|Yes|Teltonika networks remote management system (RMS)
+15010|Yes|Yes|Teltonika networks remote management system (RMS)
+15441|?|?|ZeroNet fileserver
+15567||Yes|Battlefield Vietnam and mods
+15345|Yes|Yes|XPilot Contact
+15672|Yes|No|RabbitMQ management plugin
+16000|Yes||Oracle WebCenter Content: Imaging (formerly known as Oracle Universal Content Management). Port though often changed during installation
+16080|Yes||Mac OS X Server Web (HTTP) service with performance cache
+16200|Yes||Oracle WebCenter Content: Content Server (formerly known as Oracle Universal Content Management). Port though often changed during installation
+16225|Yes||Oracle WebCenter Content: Content Server Web UI. Port though often changed during installation
+16250|Yes||Oracle WebCenter Content: Inbound Refinery (formerly known as Oracle Universal Content Management). Port though often changed during installation
+16261|Yes|Yes|Project Zomboid multiplayer. Additional sequential ports used for each player connecting to server.
+16300|Yes||Oracle WebCenter Content: Records Management (formerly known as Oracle Universal Records Management). Port though often changed during installation
+16384||Yes|CISCO Default RTP MIN
+16384-16403||Yes|Real-time Transport Protocol (RTP), RTP Control Protocol (RTCP), used by Apple's iChat for audio and video
+16384-16387||Yes|Real-time Transport Protocol (RTP), RTP Control Protocol (RTCP), used by Apple's FaceTime and Game Center
+16393-16402||Yes|Real-time Transport Protocol (RTP), RTP Control Protocol (RTCP), used by Apple's FaceTime and Game Center
+16403-16472||Yes|Real-time Transport Protocol (RTP), RTP Control Protocol (RTCP), used by Apple's Game Center
+16400|Yes||Oracle WebCenter Content: Capture (formerly known as Oracle Document Capture). Port though often changed during installation
+16482|||CISCO Default RTP MAX
+16567||Yes|Battlefield 2 and mods
+17011|Yes||Worms multiplayer
+17224|Yes|Yes|Train Realtime Data Protocol (TRDP) Process Data, network protocol used in train communication.
+17225|Yes|Yes|Train Realtime Data Protocol (TRDP) Message Data, network protocol used in train communication.
+17333|Yes||CS Server (CSMS), default binary protocol port
+17475|Yes||DMXControl 3 Network Broker
+17500|Yes|Yes|Dropbox LanSync Protocol (db-lsp); used to synchronize file catalogs between Dropbox clients on a local network.
+18080|Yes|No|Monero P2P network communications
+18081|Yes|No|Monero incoming RPC calls
+18091|Yes|Yes|memcached Internal REST HTTPS for SSL
+18092|Yes|Yes|memcached Internal CAPI HTTPS for SSL
+18104|Yes||RAD PDF Service
+18200|Yes|Yes|Audition Online Dance Battle, AsiaSoft Thailand Server status/version check
+18201|Yes|Yes|Audition Online Dance Battle, AsiaSoft Thailand Server
+18206|Yes|Yes|Audition Online Dance Battle, AsiaSoft Thailand Server FAM database
+18300|Yes|Yes|Audition Online Dance Battle, AsiaSoft SEA Server status/version check
+18301|Yes|Yes|Audition Online Dance Battle, AsiaSoft SEA Server
+18306|Yes|Yes|Audition Online Dance Battle, AsiaSoft SEA Server FAM database
+18333|Yes||Bitcoin testnet
+18400|Yes|Yes|Audition Online Dance Battle, KAIZEN Brazil Server status/version check
+18401|Yes|Yes|Audition Online Dance Battle, KAIZEN Brazil Server
+18505|Yes|Yes|Audition Online Dance Battle R4p3 Server, Nexon Server status/version check
+18506|Yes|Yes|Audition Online Dance Battle, Nexon Server
+18605|Yes|Yes|X-BEAT status/version check
+18606|Yes|Yes|X-BEAT
+18676|Yes|Yes|YouView
+19000|Yes|Yes|Audition Online Dance Battle, G10/alaplaya Server status/version check
+19001|Yes|Yes|Audition Online Dance Battle, G10/alaplaya Server
+19132||Yes|Minecraft: Bedrock Edition multiplayer server
+19133||Yes|Minecraft: Bedrock Edition IPv6 multiplayer server
+19150|Yes|Yes|Gkrellm Server
+19226|Yes||Panda Software AdminSecure Communication Agent
+19294|Yes||Google Talk Voice and Video connections
+19295||Yes|Google Talk Voice and Video connections
+19302||Yes|Google Talk Voice and Video connections
+19812|Yes|No|4D database SQL Communication
+19813|Yes|Yes|4D database Client Server Communication
+19814|Yes||4D database DB4D Communication
+19999|||Distributed Network Protocol—Secure (DNP—Secure), a secure version of the protocol used in SCADA systems between communicating RTU's and IED's
+20000|||Distributed Network Protocol (DNP), a protocol used in SCADA systems between communicating RTU's and IED's
+20560|Yes|Yes|Killing Floor
+20582||Yes|HW Development IoT comms
+20583||Yes|HW Development IoT comms
+20595||Yes|0 A.D. Empires Ascendant
+20808||Yes|Ableton Link
+21025|Yes||Starbound Server (default), Starbound
+22000|Yes||Syncthing (default)
+22136|Yes||FLIR Systems Camera Resource Protocol
+22222|Yes||Davis Instruments, WeatherLink IP
+23073|||Soldat Dedicated Server
+23399|||Skype default protocol
+23513|?|?|Duke Nukem 3D source ports
+24441|Yes|Yes|Pyzor spam detection network
+24444|||NetBeans integrated development environment
+24465|Yes|Yes|Tonido Directory Server for Tonido which is a Personal Web App and P2P platform
+24554|Yes|Yes|BINKP, Fidonet mail transfers over TCP/IP
+24800|||Synergy: keyboard/mouse sharing software
+24842|||StepMania: Online: Dance Dance Revolution Simulator
+25565|Yes||Minecraft (Java Edition) multiplayer server
+25575||Yes|Minecraft (Java Edition) multiplayer server RCON
+25826||Yes|collectd default port
+26000|Yes|Yes|id Software's Quake server
+26900–26901|Yes||EVE Online
+27000|Yes||PowerBuilder SySAM license server
+27000–27006||Yes|id Software's QuakeWorld master server
+27000–27009|Yes|Yes|FlexNet Publisher's License server (from the range of default ports)
+27000–27015|No|Yes|Steam (game client traffic)
+27015|No|Yes|GoldSrc and Source engine dedicated server port
+27015-27018||Yes|Unturned, a survival game
+27015–27030|No|Yes|Steam (matchmaking and HLTV)
+27016|||Magicka server port
+27017|Yes|No|MongoDB daemon process (mongod) and routing service (mongos)
+27031|Ports 27036 & 27037|Yes|Steam (In-Home Streaming)
+27036|Yes|Yes|Steam (In-Home Streaming)
+27037|Yes|Ports 27031 & 27036|Steam (In-Home Streaming)
+27374|||Sub7 default.
+27500–27900||Yes|id Software's QuakeWorld
+27888||Yes|Kaillera server
+27901–27910||Yes|id Software's Quake II master server
+27950||Yes|OpenArena outgoing
+27960–27969||Yes|Activision's Enemy Territory and id Software's Quake III Arena, Quake III and Quake Live and some ioquake3 derived games, such as Urban Terror (OpenArena incoming)
+28001|||Starsiege: Tribes
+28015||Yes|Rust (video game)
+28770–28771||Yes|AssaultCube Reloaded, a video game based upon a modification of AssaultCube
+28785–28786||Yes|Cube 2: Sauerbraten
+28852|Yes|Yes|Killing Floor
+28910|Yes|Yes|Nintendo Wi-Fi Connection
+28960|Yes|Yes|Call of Duty; Call of Duty: United Offensive; Call of Duty 2; Call of Duty 4: Modern Warfare;
+29000|?|?|Perfect World, an adventure and fantasy MMORPG
+29070|Yes|Yes|Jedi Knight: Jedi Academy by Ravensoft
+29900–29901|Yes|Yes|Nintendo Wi-Fi Connection
+29920|Yes|Yes|Nintendo Wi-Fi Connection
+30564|Yes||Multiplicity: keyboard/mouse/clipboard sharing software
+31337|Yes||Back Orifice and  Back Orifice 2000 remote administration tools
+31416|?|?|BOINC RPC
+31438|Yes||Rocket U2
+31457|Yes||TetriNET
+32137|Yes|Yes|Immunet Protect (UDP in version 2.0,)
+32400|Yes||Plex Media Server
+32764|Yes||A backdoor found on certain Linksys, Netgear and other wireless DSL modems/combination routers
+32887|Yes||Ace of Spades, a multiplayer FPS video game
+32976|Yes||LogMeIn Hamachi, a VPN application; also TCP port 12975 and SSL (TCP 443).
+33434|Yes|Yes|traceroute
+33848||Yes|Jenkins, a continuous integration (CI) tool
+34000||Yes|Infestation: Survivor Stories (formerly known as The War Z), a multiplayer zombie video game
+34197|No|Yes|Factorio, a multiplayer survival and factory-building game
+35357|Yes||OpenStack Identity (Keystone) administration
+37008||Yes|TZSP intrusion detection
+40000|Yes|Yes|SafetyNET p – a real-time Industrial Ethernet protocol
+41121|Yes|Yes|Tentacle Server - Pandora FMS
+43110|Yes||ZeroNet web UI default port
+43594–43595|?|?|RuneScape
+44405|Yes||Mu Online Connect Server
+44818|Yes|Yes|EtherNet/IP explicit messaging
+47808|Yes|Yes|BACnet Building Automation and Control Networks (4780810 = BAC016)
+49151|Reserved|Reserved|Reserved
+49152–65535|Yes|No|Certificate Management over CMS
+60000–61000|Port 22|Yes|Range from which Mosh – a remote-terminal application similar to SSH – typically assigns ports for ongoing sessions between Mosh servers and Mosh clients.
+64738|Yes|Yes|Mumble
